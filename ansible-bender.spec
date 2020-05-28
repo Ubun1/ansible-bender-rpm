@@ -7,7 +7,7 @@
 
 Name:           ansible-bender
 Version:        0.8.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Build container images using Ansible playbooks
 
 License:        MIT
@@ -86,7 +86,7 @@ PYTHONPATH=%{buildroot}%{python3_sitelib} \
 
 %changelog
 * Thu May 28 2020 Nikita Kretov <kretov995@gmail.com> - 0.8.1-1
-- Build 0.8.0
+- Build 0.8.1
 
 * Wed Jul 03 2019 Gordon Messmer <gordon.messmer@gmail.com> - 0.7.0-1
 - Build 0.7.0
