@@ -7,7 +7,7 @@
 
 Name:           ansible-bender
 Version:        0.8.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Build container images using Ansible playbooks
 
 License:        MIT
@@ -76,6 +76,7 @@ PYTHONPATH=%{buildroot}%{python3_sitelib} \
 
 %files
 %{python3_sitelib}/ansible_bender-*.egg-info/
+%{python3_sitelib}/ansible_bender/builders/
 %{python3_sitelib}/ansible_bender/
 %{_bindir}/ansible-bender
 %license LICENSE
