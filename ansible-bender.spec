@@ -7,12 +7,13 @@
 
 Name:           ansible-bender
 Version:        0.8.1
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Build container images using Ansible playbooks
 
 License:        MIT
 URL:            https://github.com/ansible-community/ansible-bender
 Source0:        %{name}-%{version}.tar.gz
+Source1:        setup.patch
 
 BuildArch:      noarch
 
@@ -76,7 +77,7 @@ PYTHONPATH=%{buildroot}%{python3_sitelib} \
 
 %files
 %{python3_sitelib}/ansible_bender-*.egg-info/
-%{python3_sitelib}/ansible_bender/*
+%{python3_sitelib}/ansible_bender/
 %{_bindir}/ansible-bender
 %license LICENSE
 %doc docs/* README.md
@@ -84,12 +85,23 @@ PYTHONPATH=%{buildroot}%{python3_sitelib} \
 
 
 %changelog
-* Thu May 28 2020 Nikita Kretov <kretov995@gmail.com> - 0.8.1-1
-- Build 0.8.1
+* Thu Dec 12 2019 Tomas Tomecek <ttomecek@redhat.com> - 0.8.1-1
+- new upstream release: 0.8.1
+
+* Tue Nov 19 2019 Tomas Tomecek <ttomecek@redhat.com> - 0.8.0-1
+- new upstream release: 0.8.0
+
+* Thu Oct 03 2019 Miro Hrončok <mhroncok@redhat.com> - 0.7.0-4
+- Rebuilt for Python 3.8.0rc1 (#1748018)
+
+* Mon Aug 19 2019 Miro Hrončok <mhroncok@redhat.com> - 0.7.0-3
+- Rebuilt for Python 3.8
+
+* Wed Jul 24 2019 Fedora Release Engineering <releng@fedoraproject.org> - 0.7.0-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
 
 * Wed Jul 03 2019 Gordon Messmer <gordon.messmer@gmail.com> - 0.7.0-1
 - Build 0.7.0
 
 * Tue Jul 02 2019 Gordon Messmer <gordon.messmer@gmail.com> - 0.6.1-6
 - First build for Fedora
-
